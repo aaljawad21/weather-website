@@ -61,7 +61,9 @@ app.get('/weather', (req, res)=>{
         forecast.getTemp(coordinates,(error,{current})=>{
             return res.send({
                 city: req.query.address,
-                temperature: JSON.stringify(current.temperature)  
+                temperature: JSON.stringify(current.temperature),
+                feelslike: JSON.stringify(current.feelslike),
+                humidity: JSON.stringify(current.humidity)
             })
         })   
     })

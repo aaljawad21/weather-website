@@ -15,6 +15,7 @@ fetch('/weather?address='+search.value).then((response)=>{
 
     response.json().then((data) => {
 message1.textContent = 'The temperature in ' + data.city + ' is ' +data.temperature +' degrees'
+message2.textContent = 'It feels like '+ data.feelslike +' . The humidity is ' + data.humidity +'%'
 search.value =''
 
  })
