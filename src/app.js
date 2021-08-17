@@ -5,6 +5,7 @@ const forecast = require('./forecast.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // define paths for Express config
 const static_content =path.join(__dirname,'..','/public')
@@ -76,6 +77,6 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(3000, () =>{
-    console.log('Web Server started..')
+app.listen(port, () =>{
+    console.log('Web Server started. Listening on port '+port)
 })

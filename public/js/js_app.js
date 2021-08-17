@@ -11,7 +11,7 @@ const message2 = document.querySelector('#message-2')
 
 weatherdata.addEventListener('submit', (e)=>{
 e.preventDefault()
-fetch('http://clm-aus-uww2l1:3000/weather?address='+search.value).then((response)=>{
+fetch('/weather?address='+search.value).then((response)=>{
 
     response.json().then((data) => {
 message1.textContent = 'The temperature in ' + data.city + ' is ' +data.temperature +' degrees'
